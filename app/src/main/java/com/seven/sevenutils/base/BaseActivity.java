@@ -16,7 +16,7 @@ import com.seven.sevenutils.utils.StatusBarUtil;
  * activity抽象基类
  */
 public abstract class BaseActivity extends AppCompatActivity implements BaseUIOperation, View.OnClickListener {
-    private BaseActivity mActivity;
+    public BaseActivity mActivity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
