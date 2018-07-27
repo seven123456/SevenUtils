@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <com.seven.sevenutils.utils.BaseToolBar
+        android:id="@+id/base_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:centre_title="首页" />
 
     <TextView
         android:id="@+id/tv_verfiy_empty"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@color/seven_text_view_007AFF"
+        android:layout_below="@+id/base_title"
+        android:background="@color/seven_text_normal_999999"
         android:gravity="center"
         android:text="验证N多个输入框是否为空以及正则"
         android:textSize="14sp" />
+
+    <com.seven.sevenutils.utils.BaseLoadStatusView
+        android:id="@+id/base_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 </RelativeLayout>

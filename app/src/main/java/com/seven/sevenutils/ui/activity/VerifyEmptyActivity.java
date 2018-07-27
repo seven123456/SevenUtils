@@ -1,7 +1,6 @@
 package com.seven.sevenutils.ui.activity;
 
 import android.os.Bundle;
-import android.os.Looper;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;

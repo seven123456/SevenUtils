@@ -13,4 +13,27 @@
         <item name="colorControlNormal">@color/seven_text_view_FF3A30</item>
         <item name="colorControlActivated">@color/seven_text_view_FF3A30</item>
     </style>
+    <!--basetitle-->
+    <declare-styleable name="BaseToolBar">
+        <attr name="left_icon" format="integer" />
+        <attr name="show_left_icon" format="boolean" />
+        <attr name="centre_title" format="string|reference" />
+        <attr name="right_title" format="string|reference" />
+        <attr name="right_icon1" format="integer" />
+        <attr name="right_icon2" format="integer" />
+        <attr name="right_icon3" format="integer" />
+        <attr name="right_type" format="enum">
+            <enum name="show_title" value="1" /><!--显示右边title-->
+            <enum name="show_right_icon" value="2" /><!--显示右边单个icon-->
+            <enum name="show_right_icon_all" value="3" /><!--显示右边所有icon-->
+            <enum name="show_title_icon" value="4" /><!--显示右边title和icon-->
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BaseLoadStatusView">
+        <attr name="loading_view" format="reference" />
+        <attr name="error_view" format="reference" />
+        <attr name="empty_view" format="reference" />
+        <attr name="noNetwor_view" format="reference" />
+    </declare-styleable>
 </resources>
