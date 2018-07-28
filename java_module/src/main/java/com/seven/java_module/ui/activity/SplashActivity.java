@@ -15,6 +15,7 @@ import com.seven.java_module.ui.router.JavaRouterUrl;
  * Created  on 2018/7/28.
  * author:seven
  * email:seven2016s@163.com
+ * 启动页面，跳转Javamodule和
  */
 public class SplashActivity extends BaseActivity {
 

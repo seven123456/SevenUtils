@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seven.sevenutils">
-
+    <!--整个project唯一的application配置-->
     <application
         android:name=".MyApplication"
         android:allowBackup="true"

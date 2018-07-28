@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
+    /*rootProject.ext这里是通过配置全局的信息来获取，具体位置在project下面的config.gradle
+   * TIP:要记得在project下面的build.gradle里面依赖进去*/
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {

@@ -1,3 +1,4 @@
+/*通过config.gradle里面的全局变量来控制module是做应用还是库*/
 if (Boolean.valueOf(rootProject.ext.javamodule)) {
     apply plugin: 'com.android.application'
 } else {
@@ -5,6 +6,8 @@ if (Boolean.valueOf(rootProject.ext.javamodule)) {
 }
 
 android {
+    /*rootProject.ext这里是通过配置全局的信息来获取，具体位置在project下面的config.gradle
+   * TIP:要记得在project下面的build.gradle里面依赖进去*/
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
@@ -20,8 +23,12 @@ android {
                 arguments = [moduleName: project.getName()]
             }
         }
+        //MultiDex分包方法
+        multiDexEnabled true
+
+
         //强制前缀,解决各个module之间的资源冲突
-        resourcePrefix "kotlin_"
+        resourcePrefix "java_"
     }
 
     buildTypes {

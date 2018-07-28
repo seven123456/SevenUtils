@@ -11,6 +11,7 @@ import com.seven.java_module.BuildConfig;
  * Created  on 2018/7/28.
  * author:seven
  * email:seven2016s@163.com
+ * 继承抽象application代理基类，初始化arouter
  */
 public class JavaApplication extends BaseApplicationProxy {
 
