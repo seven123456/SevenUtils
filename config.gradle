@@ -1,0 +1,30 @@
+/*全局信息配置以及第三方管理*/
+ext {
+    isModule = false
+    javamodule = false
+    kotlinmodule = false
+
+    android = [
+            compileSdkVersion       : 26,
+            buildToolsVersion       : '27.0.3',
+            minSdkVersion           : 21,
+            versionCode             : 1,
+            targetSdkVersion        : 26,
+            versionName             : "1.0",
+            applicationId           : "com.seven.sevenutils",
+            androidSupportSdkVersion: "26.0.0"
+    ]
+    dependencies = [
+            "appcompat-v7"     : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
+            "constraint-layout": "com.android.support.constraint:constraint-layout:1.1.2",
+            "junit"            : "junit:junit:4.12",
+            "runner"           : "com.android.support.test:runner:1.0.2",
+            "espresso-core"    : "com.android.support.test.espresso:espresso-core:3.0.2",
+            //方法数超过65535解决方法64K MultiDex分包方法
+            "multidex"                       : 'com.android.support:multidex:1.0.2',
+            //路由
+            "arouter_api"                    : 'com.alibaba:arouter-api:1.2.4',
+            "arouter_compiler"               : 'com.alibaba:arouter-compiler:1.1.4',
+            "arouter_annotation"             : 'com.alibaba:arouter-annotation:1.0.4'
+    ]
+}
