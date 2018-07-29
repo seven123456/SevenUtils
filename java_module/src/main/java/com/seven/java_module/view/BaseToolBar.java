@@ -54,7 +54,7 @@ public class BaseToolBar extends RelativeLayout implements View.OnClickListener 
     }
 
     private void init(Context context, AttributeSet attrs) {
-        LayoutInflater.from(context).inflate(R.layout.view_base_tool_bar, this, true);
+        LayoutInflater.from(context).inflate(R.layout.java_view_base_tool_bar, this, true);
         iconLeft = findViewById(R.id.icon_left);
         rightIcon1 = findViewById(R.id.icon_right1);
         rightIcon2 = findViewById(R.id.icon_right2);

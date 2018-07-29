@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="java_colorPrimary">#3F51B5</color>
+    <color name="java_colorPrimaryDark">#303F9F</color>
+    <color name="java_colorAccent">#FF4081</color>
 
-    <color name="seven_text_view_007AFF">#007AFF</color>
-    <color name="seven_text_view_F5F5F5">#F5F5F5</color>
-    <color name="seven_text_title_172D3C">#172D3C</color>
-    <color name="seven_text_normal_999999">#999999</color>
-    <color name="seven_text_000000">#000000</color>
-    <color name="white_background">#FFFFFFFF</color>
-    <color name="seven_text_view_FF3A30">#FF3A30</color>
+    <color name="java_seven_text_view_007AFF">#007AFF</color>
+    <color name="java_seven_text_view_F5F5F5">#F5F5F5</color>
+    <color name="java_seven_text_title_172D3C">#172D3C</color>
+    <color name="java_seven_text_normal_999999">#999999</color>
+    <color name="java_seven_text_000000">#000000</color>
+    <color name="java_white_background">#FFFFFFFF</color>
+    <color name="java_seven_text_view_FF3A30">#FF3A30</color>
 </resources>

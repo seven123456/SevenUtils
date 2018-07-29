@@ -1,15 +1,14 @@
 package com.seven.java_module.ui.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.seven.base_core.base.BaseActivity;
-import com.seven.base_core.base.RouterURL;
 import com.seven.base_core.utils.AppManager;
 import com.seven.java_module.R;
-import com.seven.java_module.ui.router.JavaRouterUrl;
+import com.seven.java_module.router.JavaRouterUrl;
 
 /**
  * Created  on 2018/7/28.
@@ -41,10 +40,12 @@ public class SplashActivity extends BaseActivity {
     public void widgetClick(View v) {
         if (v.getId() == R.id.tv_java) {
             JavaRouterUrl.toJavaMain();
+            Log.d("widgetClick", "进Java");
         } else if (v.getId() == R.id.tv_kotlin) {
             JavaRouterUrl.toKotlinMain();
+            Log.d("widgetClick", "进kotlin");
         }
-        AppManager.getAppManager().finishActivity(mActivity);
+        finish();
     }
 
     @Override

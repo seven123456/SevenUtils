@@ -1,6 +1,7 @@
-package com.seven.java_module.ui.router;
+package com.seven.java_module.router;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.facade.Postcard;
+import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.seven.base_core.base.RouterURL;
 

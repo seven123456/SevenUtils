@@ -18,7 +18,7 @@ import com.seven.base_core.base.RouterURL;
 public class MainActivity extends BaseActivity {
     @Override
     public int getContentViewResId() {
-        return R.layout.activity_main;
+        return R.layout.java_activity_main;
     }
 
     @Override
