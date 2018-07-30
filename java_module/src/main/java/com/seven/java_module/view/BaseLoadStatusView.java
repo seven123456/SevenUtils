@@ -39,10 +39,10 @@ public class BaseLoadStatusView extends FrameLayout {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.BaseLoadStatusView);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.java_BaseLoadStatusView);
         if (typedArray != null) {
-            loadingLayout = typedArray.getResourceId(R.styleable.BaseLoadStatusView_loading_view, R.layout.java_base_loading_view);
-            errorLayout = typedArray.getResourceId(R.styleable.BaseLoadStatusView_error_view, R.layout.java_base_error_view);
+            loadingLayout = typedArray.getResourceId(R.styleable.java_BaseLoadStatusView_java_loading_view, R.layout.java_base_loading_view);
+            errorLayout = typedArray.getResourceId(R.styleable.java_BaseLoadStatusView_java_error_view, R.layout.java_base_error_view);
         }
         typedArray.recycle();
         loadingView = inflate(context, loadingLayout, this);

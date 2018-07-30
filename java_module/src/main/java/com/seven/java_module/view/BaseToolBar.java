@@ -64,19 +64,19 @@ public class BaseToolBar extends RelativeLayout implements View.OnClickListener 
         View viewSpace = findViewById(R.id.view_space);
         StatusBarUtil.setTranslate((AppCompatActivity) context, false);
         StatusBarUtil.setFadeStatusBarHeight(context, viewSpace);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.BaseToolBar);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.java_BaseToolBar);
         if (typedArray != null) {
-            boolean isHowleft = typedArray.getBoolean(R.styleable.BaseToolBar_left_icon, true);
+            boolean isHowleft = typedArray.getBoolean(R.styleable.java_BaseToolBar_java_left_icon, true);
             if (!isHowleft) {
                 iconLeft.setVisibility(GONE);
             }
-            Drawable leftDrawable = typedArray.getDrawable(R.styleable.BaseToolBar_left_icon);//左边icon
-            Drawable right1 = typedArray.getDrawable(R.styleable.BaseToolBar_right_icon1);//最右边icon
-            Drawable right2 = typedArray.getDrawable(R.styleable.BaseToolBar_right_icon2);//右边第二个icon
-            Drawable right3 = typedArray.getDrawable(R.styleable.BaseToolBar_right_icon3);//右边title边上的icon
-            String tvTitle = typedArray.getString(R.styleable.BaseToolBar_centre_title);//中间的title
-            String righttitle = typedArray.getString(R.styleable.BaseToolBar_right_title);//最右边的title
-            int rightType = typedArray.getInt(R.styleable.BaseToolBar_right_type, 0);//默认右边全部不显示
+            Drawable leftDrawable = typedArray.getDrawable(R.styleable.java_BaseToolBar_java_left_icon);//左边icon
+            Drawable right1 = typedArray.getDrawable(R.styleable.java_BaseToolBar_java_right_icon1);//最右边icon
+            Drawable right2 = typedArray.getDrawable(R.styleable.java_BaseToolBar_java_right_icon2);//右边第二个icon
+            Drawable right3 = typedArray.getDrawable(R.styleable.java_BaseToolBar_java_right_icon3);//右边title边上的icon
+            String tvTitle = typedArray.getString(R.styleable.java_BaseToolBar_java_centre_title);//中间的title
+            String righttitle = typedArray.getString(R.styleable.java_BaseToolBar_java_right_title);//最右边的title
+            int rightType = typedArray.getInt(R.styleable.java_BaseToolBar_java_right_type, 0);//默认右边全部不显示
             iconLeft.setImageDrawable(leftDrawable);
             centreTitle.setText(tvTitle);
             switch (rightType) {

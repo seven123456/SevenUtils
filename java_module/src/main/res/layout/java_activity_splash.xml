@@ -9,10 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/seven_text_000000"
+        android:background="@color/java_seven_text_000000"
         android:gravity="center"
         android:text="JAVA版本"
-        android:textColor="@color/white_background"
+        android:textColor="@color/java_white_background"
         android:textSize="36dp" />
 
     <TextView
@@ -20,9 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/white_background"
+        android:background="@color/java_white_background"
         android:gravity="center"
         android:text="KOTLIN版本"
-        android:textColor="@color/seven_text_normal_999999"
+        android:textColor="@color/java_seven_text_normal_999999"
         android:textSize="36dp" />
 </LinearLayout>

@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        app:centre_title="首页" />
+        app:java_centre_title="首页" />
 
 
     <!--<com.seven.java_module.view.BaseLoadStatusView

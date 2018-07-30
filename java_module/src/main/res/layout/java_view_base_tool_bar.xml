@@ -9,13 +9,13 @@
         android:id="@+id/view_space"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white_background" />
+        android:background="@color/java_white_background" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:layout_below="@+id/view_space"
-        android:background="@color/white_background">
+        android:background="@color/java_white_background">
 
         <ImageView
             android:id="@+id/icon_left"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textColor="@color/seven_text_title_172D3C"
+            android:textColor="@color/java_seven_text_title_172D3C"
             android:textSize="18sp" />
 
         <TextView
@@ -40,7 +40,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
-            android:textColor="@color/seven_text_normal_999999"
+            android:textColor="@color/java_seven_text_normal_999999"
             android:textSize="12sp"
             android:visibility="gone" />
 

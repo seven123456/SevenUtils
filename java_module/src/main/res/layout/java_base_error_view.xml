@@ -11,5 +11,5 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="error页面"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/java_colorAccent" />
 </RelativeLayout>

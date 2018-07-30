@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/seven_text_view_F5F5F5">
+    android:background="@color/java_seven_text_view_F5F5F5">
 
     <TextView
         android:id="@+id/tv_title"
@@ -12,7 +12,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginTop="100dp"
         android:text="SevenUtils"
-        android:textColor="@color/seven_text_title_172D3C"
+        android:textColor="@color/java_seven_text_title_172D3C"
         android:textSize="30sp" />
 
     <EditText
@@ -23,11 +23,11 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/seven_login_shape"
+        android:background="@drawable/java_seven_login_shape"
         android:hint="请输入手机号"
         android:inputType="number"
         android:paddingLeft="10dp"
-        android:textColor="@color/seven_text_normal_999999"
+        android:textColor="@color/java_seven_text_normal_999999"
         android:textSize="14sp"
         android:theme="@style/MyEditText" />
 
@@ -39,10 +39,10 @@
         android:layout_marginBottom="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/seven_login_shape"
+        android:background="@drawable/java_seven_login_shape"
         android:hint="请输入6-20包括字母数字的密码"
         android:paddingLeft="10dp"
-        android:textColor="@color/seven_text_normal_999999"
+        android:textColor="@color/java_seven_text_normal_999999"
         android:textSize="14sp"
         android:theme="@style/MyEditText" />
 
@@ -53,6 +53,6 @@
         android:layout_below="@+id/ed_password"
         android:gravity="center"
         android:text="登录"
-        android:textColor="@color/seven_text_title_172D3C"
+        android:textColor="@color/java_seven_text_title_172D3C"
         android:textSize="24sp" />
 </RelativeLayout>
