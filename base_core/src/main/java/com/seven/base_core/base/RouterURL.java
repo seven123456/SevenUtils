@@ -11,4 +11,7 @@ public interface RouterURL {
     String KOTLIN_MAIN = "/kotlin/kotlin_main";
     /*进入Java版本url*/
     String JAVA_MAIN = "/java/java_main";
+
+    /*java版本获取application*/
+    String MYAPP_CONTEXT = "/myapp/service";
 }

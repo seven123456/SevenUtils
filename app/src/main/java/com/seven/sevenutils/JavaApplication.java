@@ -1,6 +1,8 @@
 package com.seven.sevenutils;
 
 import android.app.Application;
+import android.content.Context;
+import android.util.Log;
 
 import com.seven.base_core.base.BaseApplicationProxy;
 import com.seven.base_core.utils.RouterConfig;

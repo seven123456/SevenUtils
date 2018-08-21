@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    >
 
     <com.seven.java_module.view.BaseToolBar
         android:id="@+id/base_title"
@@ -12,10 +14,9 @@
         android:layout_marginBottom="10dp"
         app:java_centre_title="首页" />
 
-
-    <!--<com.seven.java_module.view.BaseLoadStatusView
-        android:id="@+id/base_load"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_home"
+        android:layout_below="@+id/base_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />-->
+        android:layout_height="match_parent" />
 </RelativeLayout>

@@ -1,8 +1,10 @@
 package com.seven.sevenutils;
 
 import android.app.Application;
+import android.content.Context;
 import android.support.multidex.MultiDexApplication;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.seven.base_core.base.BaseApplicationProxy;
 import com.seven.base_core.utils.AppManager;
@@ -18,12 +20,21 @@ import com.seven.base_core.utils.AppManager;
  * 同样的在每个module下面的dradle里面也记得配置相关信息
  */
 public class MyApplication extends MultiDexApplication {
+    private static Context context;
+
+    public static Context getContext() {
+        return context;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
         /*初始化BaseApplicationProxy*/
         BaseApplicationProxy application = createProxy(this);
         application.onCreate();
+        context = this;
+        Log.d("MyApplicationService", "是不是真的" + (context == null));
+
     }
 
     /**
