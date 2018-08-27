@@ -13,5 +13,5 @@
 - [x] BaseLoadStatusView:主要针对项目中页面状态进行封装，以自定义view的形式来兼容不同状态，妈妈再也不用担心我include了
 
 #java_module:用Java语言编写base_core里面的utils
-
+- [x] JavaLoadingViewActivity:页面状态的处理
 #kotlin_module:用语言编写base_core里面的utils
