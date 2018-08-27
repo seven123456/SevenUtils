@@ -1,4 +1,4 @@
-package com.seven.java_module.view;
+package com.seven.java_module.ui.loadingview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -66,10 +66,15 @@ public class BaseLoadStatusView extends FrameLayout {
         showView(1);
     }
 
+    public void GoneView() {
+        showView(9);
+    }
+
     /*获取对应的页面提供给具体界面，然后find具体控件进行操作*/
     public View getLoadingView() {
         return loadingView;
     }
+
     /*获取对应的页面提供给具体界面，然后find具体控件进行操作*/
     public View getErrorView() {
         return errorView;
@@ -102,6 +107,9 @@ public class BaseLoadStatusView extends FrameLayout {
     /*显示对应的view就完了*/
     private void viewShow(int index, View child) {
         child.setVisibility(VISIBLE);
+        if(index==0){
+            child.findViewById(R.id.progress).setVisibility(VISIBLE);
+        }
     }
 
     private void initListener() {
@@ -109,7 +117,15 @@ public class BaseLoadStatusView extends FrameLayout {
             @Override
             public void onClick(View view) {
                 if (loadOnClickListener != null) {
-                    loadOnClickListener.loadingOnClick();
+                    loadOnClickListener.loadingOnClick(1);
+                }
+            }
+        });
+        errorView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (loadOnClickListener != null) {
+                    loadOnClickListener.loadingOnClick(2);
                 }
             }
         });
@@ -122,7 +138,7 @@ public class BaseLoadStatusView extends FrameLayout {
     }
 
     public interface LoadOnClickListener {
-        void loadingOnClick();
+        void loadingOnClick(int type);
     }
 
 }

@@ -1,7 +1,5 @@
 package com.seven.java_module.router;
 
-import com.alibaba.android.arouter.facade.Postcard;
-import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.seven.base_core.base.RouterURL;
 
@@ -14,11 +12,16 @@ import com.seven.base_core.base.RouterURL;
 public class JavaRouterUrl {
     /*进入Java版本主页*/
     public static void toJavaMain() {
-        ARouter.getInstance().build(RouterURL.JAVA_MAIN).navigation();
+        ARouter.getInstance().build(JavaConstants.JAVA_MAIN).navigation();
     }
 
     /*进入kotlin版本主页*/
     public static void toKotlinMain() {
         ARouter.getInstance().build(RouterURL.KOTLIN_MAIN).navigation();
+    }
+
+    /*进入loadingview*/
+    public static void toLoadingView() {
+        ARouter.getInstance().build(JavaConstants.LOADING_STATUS).navigation();
     }
 }

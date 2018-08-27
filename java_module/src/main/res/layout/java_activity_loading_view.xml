@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.seven.java_module.view.BaseToolBar
+        android:id="@+id/base_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:java_centre_title ="页面状态加载view"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/base_title"
+        android:id="@+id/recycler_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.seven.java_module.ui.loadingview.BaseLoadStatusView
+        android:layout_below="@+id/base_title"
+        android:id="@+id/base_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</RelativeLayout>

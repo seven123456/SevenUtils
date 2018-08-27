@@ -6,6 +6,7 @@
     android:layout_marginLeft="12dp"
     android:layout_marginRight="12dp"
     android:background="#ffffff"
+    android:id="@+id/rly_root_view"
     android:layout_marginTop="12dp">
 
     <TextView

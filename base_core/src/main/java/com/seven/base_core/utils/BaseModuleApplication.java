@@ -1,7 +1,6 @@
 package com.seven.base_core.utils;
 
 import android.content.Context;
-import android.provider.SyncStateContract;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.seven.base_core.base.RouterURL;

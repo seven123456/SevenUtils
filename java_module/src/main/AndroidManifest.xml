@@ -13,5 +13,6 @@
             </intent-filter>
         </activity>-->
             <activity android:name=".MainActivity" />
+        <activity android:name=".ui.loadingview.JavaLoadingViewActivity"/>
     </application>
 </manifest>

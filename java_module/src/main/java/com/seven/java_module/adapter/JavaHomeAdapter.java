@@ -1,16 +1,13 @@
 package com.seven.java_module.adapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.alibaba.android.arouter.launcher.ARouter;
-import com.seven.base_core.base.RouterURL;
 import com.seven.base_core.utils.BaseModuleApplication;
-import com.seven.base_core.utils.IApplicationService;
 import com.seven.java_module.R;
 import com.seven.java_module.info.JavaHomeInfos;
 
@@ -45,10 +42,18 @@ public class JavaHomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         JavaHomeInfos javaHomeInfos = javaHomeInfosList.get(position);
         if (javaHomeInfos != null) {
             ((JavaHomeViewHolder) holder).itemTitle.setText(javaHomeInfos.getItemName());
+            ((JavaHomeViewHolder) holder).rootView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onItemClickListener != null) {
+                        onItemClickListener.onItemClick(JavaHomeAdapter.this, v, position);
+                    }
+                }
+            });
         }
     }
 
@@ -59,10 +64,22 @@ public class JavaHomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     public class JavaHomeViewHolder extends RecyclerView.ViewHolder {
         private TextView itemTitle;
+        private RelativeLayout rootView;
 
         public JavaHomeViewHolder(View view) {
             super(view);
             itemTitle = view.findViewById(R.id.tv_title);
+            rootView = view.findViewById(R.id.rly_root_view);
         }
+    }
+
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener itemClickListener) {
+        this.onItemClickListener = itemClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(JavaHomeAdapter adapter, View view, int position);
     }
 }

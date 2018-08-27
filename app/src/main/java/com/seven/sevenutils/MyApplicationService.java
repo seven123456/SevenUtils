@@ -8,6 +8,7 @@ import com.seven.base_core.utils.IApplicationService;
 
 import static com.seven.base_core.base.RouterURL.MYAPP_CONTEXT;
 
+
 /**
  * Created  on 2018/8/21 0021.
  * author:seven

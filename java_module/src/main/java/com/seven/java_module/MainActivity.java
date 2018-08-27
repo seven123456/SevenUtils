@@ -1,28 +1,27 @@
 package com.seven.java_module;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.seven.base_core.base.BaseActivity;
-import com.seven.base_core.base.RouterURL;
 import com.seven.java_module.adapter.JavaHomeAdapter;
 import com.seven.java_module.info.JavaHomeInfos;
+import com.seven.java_module.router.JavaConstants;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.seven.java_module.router.JavaRouterUrl.toLoadingView;
 
 /**
  * Created  on 2018/7/28.
  * author:seven
  * email:seven2016s@163.com
  */
-@Route(path = RouterURL.JAVA_MAIN)
+@Route(path = JavaConstants.JAVA_MAIN)
 public class MainActivity extends BaseActivity {
 
     private JavaHomeAdapter javaHomeAdapter;
@@ -60,6 +59,12 @@ public class MainActivity extends BaseActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(mActivity, 3));
         javaHomeAdapter = new JavaHomeAdapter(R.layout.java_recyclerview_home_item, javaHomeInfosList);
         recyclerView.setAdapter(javaHomeAdapter);
+        javaHomeAdapter.setOnItemClickListener(new JavaHomeAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(JavaHomeAdapter adapter, View view, int position) {
+                toLoadingView();
+            }
+        });
     }
 
     @Override
