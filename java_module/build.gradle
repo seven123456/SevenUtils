@@ -56,4 +56,10 @@ dependencies {
     api rootProject.ext.dependencies["arouter_api"]
     api rootProject.ext.dependencies["arouter_annotation"]
 
+    api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["adapter-rxjava2"]
+    api rootProject.ext.dependencies["converter-gson"]
+    api rootProject.ext.dependencies["logging-interceptor"]
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
 }

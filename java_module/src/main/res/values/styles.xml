@@ -14,7 +14,7 @@
         <item name="colorControlActivated">@color/java_seven_text_view_FF3A30</item>
     </style>
     <!--basetitle-->
-    <declare-styleable name="java_BaseToolBar">
+    <declare-styleable name="javaBaseToolBar">
         <attr name="java_left_icon" format="integer" />
         <attr name="java_show_left_icon" format="boolean" />
         <attr name="java_centre_title" format="string|reference" />

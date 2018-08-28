@@ -7,9 +7,11 @@ package com.seven.java_module.router;
  */
 public class JavaConstants {
     //进入loadingview
-    public static final String LOADING_STATUS = "/java/view/loading_status";
+    public static final String LOADING_STATUS = "/java/ui/loading_status";
 
     /*进入Java版本url*/
     public static final String JAVA_MAIN = "/java/java_main";
 
+    //进入retrofit_rxjava页面
+    public static final String RETROFIT_RXJAVA = "/java/ui/retrofit_rxjava";
 }

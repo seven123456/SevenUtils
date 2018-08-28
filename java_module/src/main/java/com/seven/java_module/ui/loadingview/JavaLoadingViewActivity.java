@@ -2,8 +2,6 @@ package com.seven.java_module.ui.loadingview;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -13,7 +11,7 @@ import com.seven.base_core.base.BaseActivity;
 import com.seven.base_core.utils.AppManager;
 import com.seven.java_module.R;
 import com.seven.java_module.router.JavaConstants;
-import com.seven.java_module.view.BaseToolBar;
+import com.seven.java_module.view.javaBaseToolBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +27,7 @@ public class JavaLoadingViewActivity extends BaseActivity {
     private BaseLoadStatusView baseLoadStatusView;
     private RecyclerView recyclerView;
     private LoadingAdapater loadingAdapater;
-    private BaseToolBar baseToolBar;
+    private javaBaseToolBar javaBaseToolBar;
 
     @Override
     public int getContentViewResId() {
@@ -38,8 +36,8 @@ public class JavaLoadingViewActivity extends BaseActivity {
 
     @Override
     public void initView(Bundle savedInstanceState) {
-        baseToolBar = findViewById(R.id.base_title);
-        baseToolBar.setLeftIconDrawable(getResources().getDrawable(R.drawable.icon_return_normal));
+        javaBaseToolBar = findViewById(R.id.base_title);
+        javaBaseToolBar.setLeftIconDrawable(getResources().getDrawable(R.drawable.icon_return_normal));
         baseLoadStatusView = findViewById(R.id.base_loading_view);
         baseLoadStatusView.showErrorView();
         recyclerView = findViewById(R.id.recycler_loading);
@@ -94,7 +92,7 @@ public class JavaLoadingViewActivity extends BaseActivity {
                 }
             }
         });
-        baseToolBar.setBaseToolBaseOnClickListener(new BaseToolBar.onBaseToolBaseOnClickListener() {
+        javaBaseToolBar.setBaseToolBaseOnClickListener(new javaBaseToolBar.onBaseToolBaseOnClickListener() {
             @Override
             public void leftOnClick() {
                 AppManager.getAppManager().finishActivity(mActivity);

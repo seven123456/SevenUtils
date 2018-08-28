@@ -19,6 +19,7 @@ import com.seven.java_module.R;
  * Created  on 2018/7/27 0027.
  * author:seven
  * email:seven2016s@163.com
+ * 因为module之间资源问题在类名面前加了个java
  * 本控件处理有以下几种情况
  * 1.左边icon 提供了设置本地资源 网络图片的方法以及是否要显示，默认显示  lefticon
  * 2.中间title 提供了设置中间title的颜色设置、内容设置                  centreTitle
@@ -30,7 +31,7 @@ import com.seven.java_module.R;
  * 8.所有控件的点击事件监听,我再这里把所有的onclick方法都写在一个接口里面，具体实现会把所有方法都实现，如果想兼容项目中所有的样式，
  * 点击方法可以自己剥离出来处理
  */
-public class BaseToolBar extends RelativeLayout implements View.OnClickListener {
+public class javaBaseToolBar extends RelativeLayout implements View.OnClickListener {
 
     private ImageView iconLeft, rightIcon1, rightIcon2, rightIcon3;
     private TextView centreTitle, rightTitle;
@@ -39,16 +40,16 @@ public class BaseToolBar extends RelativeLayout implements View.OnClickListener 
     public static int TYPE_THR = 3;//最右边title边上icon
     public int rightype = 0;
 
-    public BaseToolBar(Context context) {
+    public javaBaseToolBar(Context context) {
         super(context);
     }
 
-    public BaseToolBar(Context context, AttributeSet attrs) {
+    public javaBaseToolBar(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public BaseToolBar(Context context, AttributeSet attrs, int defStyleAttr) {
+    public javaBaseToolBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -64,19 +65,19 @@ public class BaseToolBar extends RelativeLayout implements View.OnClickListener 
         View viewSpace = findViewById(R.id.view_space);
         StatusBarUtil.setTranslate((AppCompatActivity) context, false);
         StatusBarUtil.setFadeStatusBarHeight(context, viewSpace);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.java_BaseToolBar);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.javaBaseToolBar);
         if (typedArray != null) {
-            boolean isHowleft = typedArray.getBoolean(R.styleable.java_BaseToolBar_java_left_icon, true);
+            boolean isHowleft = typedArray.getBoolean(R.styleable.javaBaseToolBar_java_left_icon, true);
             if (!isHowleft) {
                 iconLeft.setVisibility(GONE);
             }
-            Drawable leftDrawable = typedArray.getDrawable(R.styleable.java_BaseToolBar_java_left_icon);//左边icon
-            Drawable right1 = typedArray.getDrawable(R.styleable.java_BaseToolBar_java_right_icon1);//最右边icon
-            Drawable right2 = typedArray.getDrawable(R.styleable.java_BaseToolBar_java_right_icon2);//右边第二个icon
-            Drawable right3 = typedArray.getDrawable(R.styleable.java_BaseToolBar_java_right_icon3);//右边title边上的icon
-            String tvTitle = typedArray.getString(R.styleable.java_BaseToolBar_java_centre_title);//中间的title
-            String righttitle = typedArray.getString(R.styleable.java_BaseToolBar_java_right_title);//最右边的title
-            int rightType = typedArray.getInt(R.styleable.java_BaseToolBar_java_right_type, 0);//默认右边全部不显示
+            Drawable leftDrawable = typedArray.getDrawable(R.styleable.javaBaseToolBar_java_left_icon);//左边icon
+            Drawable right1 = typedArray.getDrawable(R.styleable.javaBaseToolBar_java_right_icon1);//最右边icon
+            Drawable right2 = typedArray.getDrawable(R.styleable.javaBaseToolBar_java_right_icon2);//右边第二个icon
+            Drawable right3 = typedArray.getDrawable(R.styleable.javaBaseToolBar_java_right_icon3);//右边title边上的icon
+            String tvTitle = typedArray.getString(R.styleable.javaBaseToolBar_java_centre_title);//中间的title
+            String righttitle = typedArray.getString(R.styleable.javaBaseToolBar_java_right_title);//最右边的title
+            int rightType = typedArray.getInt(R.styleable.javaBaseToolBar_java_right_type, 0);//默认右边全部不显示
             iconLeft.setImageDrawable(leftDrawable);
             centreTitle.setText(tvTitle);
             switch (rightType) {
@@ -171,19 +172,19 @@ public class BaseToolBar extends RelativeLayout implements View.OnClickListener 
      * 如果项目中toolbar上面都没有用到网络图片，就不用多写一个方法
      * 以下所有同理
      * */
-    public BaseToolBar setLeftIconDrawable(Drawable resid) {
+    public javaBaseToolBar setLeftIconDrawable(Drawable resid) {
         iconLeft.setImageDrawable(resid);
         return this;
     }
 
     /*加载网络图片，方法自己用glide写*/
-    public BaseToolBar setLeftIconUrl(String url) {
+    public javaBaseToolBar setLeftIconUrl(String url) {
 //        iconLeft.setImageDrawable(resid);
         return this;
     }
 
     /*加载右边icon 本地资源*/
-    public BaseToolBar setRightIconDrawable(Drawable resid, int type) {
+    public javaBaseToolBar setRightIconDrawable(Drawable resid, int type) {
         if (type == TYPE_ONE) {
             rightIcon1.setImageDrawable(resid);
         } else if (type == TYPE_TWO) {
@@ -195,7 +196,7 @@ public class BaseToolBar extends RelativeLayout implements View.OnClickListener 
     }
 
     /*加载右边网络图片*/
-    public BaseToolBar setRightIconUrl(Drawable resid, int type) {
+    public javaBaseToolBar setRightIconUrl(Drawable resid, int type) {
         if (type == TYPE_ONE) {
 //            rightIcon1.setImageDrawable(resid);
         } else if (type == TYPE_TWO) {
@@ -207,13 +208,13 @@ public class BaseToolBar extends RelativeLayout implements View.OnClickListener 
     }
 
     /*设置中间title的颜色*/
-    public BaseToolBar setCentreTitleColor(int resid) {
+    public javaBaseToolBar setCentreTitleColor(int resid) {
         centreTitle.setTextColor(resid);
         return this;
     }
 
     /*设置最右边title的颜色*/
-    public BaseToolBar setRightTitleColor(int resid) {
+    public javaBaseToolBar setRightTitleColor(int resid) {
         rightTitle.setTextColor(resid);
         return this;
     }

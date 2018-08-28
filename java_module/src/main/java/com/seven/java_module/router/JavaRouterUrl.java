@@ -24,4 +24,8 @@ public class JavaRouterUrl {
     public static void toLoadingView() {
         ARouter.getInstance().build(JavaConstants.LOADING_STATUS).navigation();
     }
+    /*进入retrofit+rxjava页面*/
+    public static void toRetrofitView() {
+        ARouter.getInstance().build(JavaConstants.RETROFIT_RXJAVA).navigation();
+    }
 }

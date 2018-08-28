@@ -1,5 +1,7 @@
 package com.seven.java_module.adapter;
 
+import android.support.annotation.IntRange;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +58,13 @@ public class JavaHomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             });
         }
     }
-
+    @Nullable
+    public JavaHomeInfos getItem(@IntRange(from = 0) int position) {
+        if (position < javaHomeInfosList.size())
+            return javaHomeInfosList.get(position);
+        else
+            return null;
+    }
     @Override
     public int getItemCount() {
         return javaHomeInfosList != null && javaHomeInfosList.size() > 0 ? javaHomeInfosList.size() : 0;

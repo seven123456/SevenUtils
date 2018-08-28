@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.seven.java_module.router.JavaRouterUrl.toLoadingView;
+import static com.seven.java_module.router.JavaRouterUrl.toRetrofitView;
 
 /**
  * Created  on 2018/7/28.
@@ -50,19 +51,30 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        javaHomeInfosList.add(new JavaHomeInfos("页面加载状态"));
+        javaHomeInfosList.add(new JavaHomeInfos("页面加载状态", 1));
+        javaHomeInfosList.add(new JavaHomeInfos("Retrofit2+Rxjava2结合使用", 2));
         loadRecyclerView(javaHomeInfosList);
     }
 
     /*有数据时再填充数据给adapter，在网络请求中也可以这样做*/
     private void loadRecyclerView(List<JavaHomeInfos> javaHomeInfosList) {
-        recyclerView.setLayoutManager(new GridLayoutManager(mActivity, 3));
+        recyclerView.setLayoutManager(new GridLayoutManager(mActivity, 2));
         javaHomeAdapter = new JavaHomeAdapter(R.layout.java_recyclerview_home_item, javaHomeInfosList);
         recyclerView.setAdapter(javaHomeAdapter);
         javaHomeAdapter.setOnItemClickListener(new JavaHomeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(JavaHomeAdapter adapter, View view, int position) {
-                toLoadingView();
+                JavaHomeInfos javaHomeInfos =adapter.getItem(position);
+                if(javaHomeInfos!=null){
+                    switch (javaHomeInfos.getType()){
+                        case 1:
+                            toLoadingView();
+                            break;
+                        case 2:
+                            toRetrofitView();
+                            break;
+                    }
+                }
             }
         });
     }

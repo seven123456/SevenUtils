@@ -7,7 +7,7 @@
     android:background="#f5f5f5"
     >
 
-    <com.seven.java_module.view.BaseToolBar
+    <com.seven.java_module.view.javaBaseToolBar
         android:id="@+id/base_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
